@@ -18,5 +18,13 @@ Our group has done a substantial amount of work in CT radiomics for characteriza
 a. shape and texture features from rest MRI 
 b. combination of features from rest and stress MRI, integrating baseline patient characteristics, echo and EKG measurements.
 
+## RESULTS:
+The left ventricle (LV) and myocardium were segmented using a pretrained UNet model followed by extraction of 2D and 3D shape features. Patients were dichotomized into those above (_n_ = 19) and below 80% (_n_ = 32) of the predicted PkVO2 value. We posited that myocardial shape and texture features from cine CMR may correlate with PkVO2 reflecting latent subclinical cardiac dysfunction. We explored features that differentiate the two groups using the Mann Whitney U-test and performed regression analyses using shape features to predict PkVO2. 
 
+• The standard deviation of the LV volume (_p_ = 0.049), LV sphericity (_p_ = 0.02) and LV maximum surface area (_p_ = 0.04) during a cardiac cycle were the most significant features in distinguishing subjects with high and low PkVO2. 
 
+• A model incorporating X and Y was able to modestly predict PkVO2 (_R2_ = 0.38), with the minimum myocardium volume (_p_ = 0.002) and median LV surface to volume ratio (_p_ = 0.006) during a cardiac cycle being the most significant features. 
+
+• A multi-regression model predicted PetCO2 with an _R2_ of 0.5 where the maximum LV diameter in the sagittal plane (_p_ < 0.0005) and median LV surface to volume ratio (_p_ = 0.006) were the most important features.
+
+• We report a ROC AUC of 0.65 <ins>+</ins> 0.06 using a random forest classifier on 100 iterations of cross-validation. 
