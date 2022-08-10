@@ -1,3 +1,11 @@
+# File Description
+
+• shape\_feature\_extraction.ipynb: contains code for volume, pyradiomics and 3D fractal feature extraction.
+
+• shape.ipynb: contains code for univariate and multi-variate regression analysis to find association between PkVO2 (max oxygen intake during exercise) and PetCO2 (Partial pressure of exhaled CO2, can be a measure of of pulmonary blood flow) and shape features.
+
+• prediction.ipynb: contains code for building a classifier to predict high and low PkVO2 patients. 
+
 # RESEARCH SUMMARY
 
 ## PURPOSE: 
