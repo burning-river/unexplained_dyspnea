@@ -11,7 +11,9 @@ Our group has done a substantial amount of work in CT radiomics for characteriza
 
 ## APPROACH: 
 • Aim 1 (Segmentation): We use the nnUNet model to automatically segment cardiac chambers from rest and stress cine MRI from short axis, 2 chamber views. We aim to extract volumetric features from the cardiac components.
+
 • Aim 2 (Shape and texture Analysis): Extract and evaluate shape and texture features from the segmented chambers.
+
 • Aim 3 (Dyspnea prediction): Retrospectively predict and provide a cardiac etiology for dyspnea (using CPET derived PkVO2 as a surrogate) employing 
 a. shape and texture features from rest MRI 
 b. combination of features from rest and stress MRI, integrating baseline patient characteristics, echo and EKG measurements.
