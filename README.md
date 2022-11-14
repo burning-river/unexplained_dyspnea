@@ -31,10 +31,12 @@ Our group has done a substantial amount of work in CT radiomics for characteriza
 ## RESULTS:
 1. The left ventricle (LV) and myocardium were segmented using a pretrained UNet model that were improved upon by manual segmentation by an expert cardiologist. 
 2. This was followed by extraction of 2D and 3D shape and texture features during a cardiac cycle including the end-systole (ES) and end-diastole (ED). The shape features included Euclidean distance between pixels, surface area and volume of the ROI. The texture features included 3D Laws - where a filter of size 3x3x3 detecting edges (E3), levels (L3) and spots (S3) is convolved with the image to estimate texture energy - and 3D Gabor - where a filter with size modulated by a Gaussian function detects frequency (represented by 2π/λ) contents in images as well as their orientations (θ) along the XY and XZ planes. We posited that demographic, myocardial shape and texture features from cine CMR may correlate with PkVO2 reflecting latent subclinical cardiac dysfunction. 
-3. We extracted a total of 191 2D & 3D shape features and 824 3D-texture features (median, variance, kurtosis and skewness of 103 features for both LV and myocardium at ED and ES phases). A multivariate linear regression model was able to modestly predict PkVO2 - coefficient of determination R2 = 0.56 <ins>+</ins> 0.02 for 100 bootstrapped validation sets. The six features used by the model were: 
+3. We extracted a total of 191 2D & 3D shape features and 824 3D-texture features (median, variance, kurtosis and skewness of 103 features for both LV and myocardium at ED and ES phases). A multivariate linear regression model was able to modestly predict PkVO<sub>2</sub> - coefficient of determination R<sup>2</sup> = 0.56 <ins>+</ins> 0.02 for 100 bootstrapped validation sets. The six features used by the model were: 
 • height, 
-• kurtosis-Laws E3E3L3, • LV-ED (anticorrelation), 
+• kurtosis-Laws E3E3L3, 
+• LV-ED (anticorrelation), 
 • median-Laws E3E3S3 for LV at ED (anticorrelation), 
-• kurtosis-Gabor XY-θ=0.785, XZ-θ=0.785, λ=0.880, LVMC-ES, • median LV surface-volume ratio (anticorrelation) and 
+• kurtosis-Gabor XY-θ=0.785, XZ-θ=0.785, λ=0.880, LVMC-ES, 
+• median LV surface-volume ratio (anticorrelation) and 
 • kurtosis-Gabor XY-θ=2.356, XZ-θ=0.785, λ=0.880 for LV at ED. 
-We used the average values of the coefficients from the 100 iterations and predicted the PkVO2 with an R2 of 0.72. 
+We used the average values of the coefficients from the 100 iterations and predicted the PkVO2 with an R<sup>2</sup> of 0.72. 
