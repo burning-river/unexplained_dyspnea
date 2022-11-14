@@ -47,5 +47,10 @@ Here we discuss LV and myocardium segmentation using modifications to nnUNet. A 
 
 Literature on cardiac segmentation using deep learning models suggests that it is often advisable to train models seperately on basal, mid and apical regions of the heart. The explanation for dividing the ventricular regions is that the cardiac components, especially the RV, change shape dramatically as one transitions from the base to the apex. The DL segmentation network learns the average shape of the components throughout the entire 3D volume. Therfore, if there is shape change in the cardiac components it would affect the segmentations. 
 
-Below are illustrations of basal and apical regions. We also provide a table comparing the dice scores of the baseline nnUNet model versus the model trained seperately on base, mid and apex. 
-![Basal slice](https://github.com/burning-river/unexplained_dyspnea/blob/main/figures/basal_segmentation.png)   
+Below are illustrations of basal and apical regions. We also provide a table comparing the dice scores of the baseline nnUNet model versus the model trained seperately on base, mid and apex.
+ 
+![Basal slice](https://github.com/burning-river/unexplained_dyspnea/blob/main/figures/basal_segmentation.png)
+   
+![Apical Slice](https://github.com/burning-river/unexplained_dyspnea/blob/main/figures/apical_segmentation.png)
+
+![Dice scores](https://github.com/burning-river/unexplained_dyspnea/blob/main/figures/dice%20scores.png)
