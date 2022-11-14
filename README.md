@@ -39,4 +39,13 @@ Our group has done a substantial amount of work in CT radiomics for characteriza
 • kurtosis-Gabor XY-θ=0.785, XZ-θ=0.785, λ=0.880, LVMC-ES, 
 • median LV surface-volume ratio (anticorrelation) and 
 • kurtosis-Gabor XY-θ=2.356, XZ-θ=0.785, λ=0.880 for LV at ED. 
-We used the average values of the coefficients from the 100 iterations and predicted the PkVO2 with an R<sup>2</sup> of 0.72. 
+We used the average values of the coefficients from the 100 iterations and predicted the PkVO2 with an R<sup>2</sup> of 0.72.
+
+### SEGMENTATION
+
+Here we discuss LV and myocardium segmentation using modifications to nnUNet. A nnUNet model trained on cardiac cine MRI, short axis scans is already in existence. However, the baseline model is trained on 3D volume of the LV, RV and myocardium. We found the baseline model to be ineffective in segmenting our images. 
+
+Literature on cardiac segmentation using deep learning models suggests that it is often advisable to train models seperately on basal, mid and apical regions of the heart. The explanation for dividing the ventricular regions is that the cardiac components, especially the RV, change shape dramatically as one transitions from the base to the apex. The DL segmentation network learns the average shape of the components throughout the entire 3D volume. Therfore, if there is shape change in the cardiac components it would affect the segmentations. 
+
+Below are illustrations of basal and apical regions. We also provide a table comparing the dice scores of the baseline nnUNet model versus the model trained seperately on base, mid and apex. 
+![Basal slice](https://github.com/burning-river/unexplained_dyspnea/blob/main/figures/basal_segmentation.png)   
