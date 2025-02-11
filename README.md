@@ -2,7 +2,7 @@
 
 1. prediction\_clinical.ipynb: Contains PkVO2 prediction from clinical features.
 
-2. prediction\_combined.ipynb: Contains PkVO2 prediction by combining clinical, shape and texture features.
+2. **prediction\_combined.ipynb**: Contains PkVO2 prediction by combining clinical, shape and texture features. Main file.
 
 3. shape\_analysis.ipynb: Contains outlier analysis, U test and regression analysis of shape features.
 
